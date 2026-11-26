@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atelier · Accueil | Face B</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/scene.js" defer></script>
+  </head>
+  <body>
+    <a class="evitement" href="#contenu">Aller au contenu</a>
+    <header id="haut">
+      <div class="conteneur barre">
+        <a class="marque" href="index.html" aria-label="Face B, accueil"
+          >FACE B<span>.</span></a
+        >
+        <nav aria-label="Menu principal">
+          <a href="index.html" aria-current="page">Accueil</a>
+          <a href="programme.html">Programme</a>
+        </nav>
+      </div>
+    </header>
+    <main id="contenu">
+      <div class="bande-atelier">
+        <div class="conteneur">
+          <strong>Atelier élève</strong> · Ouvre le tutoriel et modifie les
+          fichiers dans atelier/js. <a href="../index.html">Voir la démo</a>
+        </div>
+      </div>
+      <!-- Bloc scène : début -->
+      <section class="hero" id="scene">
+        <div class="conteneur couverture">
+          <div class="intro">
+            <p class="repere">Samedi 19 juin 2027 · Paris</p>
+            <h1>Monte le<br /><em>volume.</em></h1>
+            <p>
+              Rap, R&amp;B et électro. Trois concerts pour découvrir des
+              artistes à suivre de près.
+            </p>
+            <div class="actions">
+              <a class="bouton principal" href="programme.html"
+                >Voir le programme</a
+              >
+              <a href="#infos">Infos pratiques</a>
+            </div>
+          </div>
+          <figure class="platine">
+            <div class="pochette">
+              <img
+                src="assets/cassette.jpg"
+                width="820"
+                height="820"
+                alt="Cassette audio violette, ruban déroulé" />
+              <div class="faisceau" aria-hidden="true"></div>
+              <span class="etiquette">FACE B.</span>
+            </div>
+            <figcaption>
+              <button
+                id="interrupteur"
+                class="interrupteur"
+                type="button"
+                aria-pressed="false">
+                <span class="voyant" aria-hidden="true"></span>
+                <span id="libelle-scene">Allumer la scène</span>
+              </button>
+              <span class="niveaux" aria-hidden="true"
+                ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+              ></span>
+            </figcaption>
+            <div role="status" id="essai-scene" class="retour-essai"></div>
+          </figure>
+        </div>
+      </section>
+      <!-- Bloc scène : fin -->
+      <section class="presentation">
+        <div class="conteneur bloc-editorial">
+          <h2>Le festival</h2>
+          <p>
+            À Face B, on vient pour un nom sur l’affiche et on repart avec deux
+            découvertes dans sa playlist.
+          </p>
+        </div>
+      </section>
+      <section class="lilas" id="infos">
+        <div class="conteneur">
+          <h2>Infos pratiques</h2>
+          <div class="cartes">
+            <div class="carte">
+              <h3>Où ?</h3>
+              <p>Studio Canal, Paris.</p>
+            </div>
+            <div class="carte">
+              <h3>Quand ?</h3>
+              <p>Samedi 19 juin. Ouverture à 17 h 30.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="conteneur barre">
+        <p class="marque">FACE B.</p>
+        <a href="#haut">Retour en haut</a>
+      </div>
+    </footer>
+    <script src="js/affiche.js"></script>
+    <script src="js/billet.js"></script>
+    <script src="js/scene.js"></script>
+  </body>
+</html>

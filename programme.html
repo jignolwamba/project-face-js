@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atelier · Programme | Face B</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/affiche.js" defer></script>
+    <script src="js/billet.js" defer></script>
+  </head>
+  <body>
+    <a class="evitement" href="#contenu">Aller au contenu</a>
+    <header id="haut">
+      <div class="conteneur barre">
+        <a class="marque" href="index.html" aria-label="Face B, accueil"
+          >FACE B<span>.</span></a
+        >
+        <nav aria-label="Menu principal">
+          <a href="index.html">Accueil</a>
+          <a href="programme.html" aria-current="page">Programme</a>
+        </nav>
+      </div>
+    </header>
+    <main id="contenu">
+      <div class="bande-atelier">
+        <div class="conteneur">
+          <strong>Atelier élève</strong> · Ouvre le tutoriel et modifie les
+          fichiers dans atelier/js. <a href="../programme.html">Voir la démo</a>
+        </div>
+      </div>
+      <section class="citron">
+        <div class="conteneur">
+          <p class="repere">Scène unique · Studio Canal</p>
+          <h1>À l’affiche.</h1>
+          <p>
+            Une voix soul, un micro rap, puis des machines. Choisis ton concert
+            ou reste pour les trois.
+          </p>
+          <a class="lien-horaires" href="#horaires">Aller aux horaires</a>
+        </div>
+      </section>
+      <!-- Bloc horaires + borne : début -->
+      <section id="horaires">
+        <div class="conteneur grille-programme">
+          <div>
+            <h2>Les horaires</h2>
+            <p class="aide">Choisis qui mettre en tête d’affiche.</p>
+            <div role="status" id="essai-affiche" class="retour-essai"></div>
+            <div class="horaires">
+              <p class="concert" data-visuel="lune">
+                <strong>18 h 00</strong> <span class="artiste">Naya Lune</span>
+                <small>R&amp;B</small>
+                <button
+                  class="choisir"
+                  type="button"
+                  aria-label="Afficher Naya Lune"
+                  aria-pressed="true">
+                  Afficher
+                </button>
+              </p>
+              <p class="concert" data-visuel="miro">
+                <strong>19 h 00</strong> <span class="artiste">Miro</span>
+                <small>Rap</small>
+                <button
+                  class="choisir"
+                  type="button"
+                  aria-label="Afficher Miro"
+                  aria-pressed="false">
+                  Afficher
+                </button>
+              </p>
+              <p class="concert" data-visuel="onde">
+                <strong>20 h 00</strong> <span class="artiste">Onde Zéro</span>
+                <small>Électro</small>
+                <button
+                  class="choisir"
+                  type="button"
+                  aria-label="Afficher Onde Zéro"
+                  aria-pressed="false">
+                  Afficher
+                </button>
+              </p>
+            </div>
+          </div>
+          <div
+            class="affiche"
+            id="affiche"
+            data-visuel="lune"
+            aria-live="polite"
+            aria-atomic="true">
+            <div class="bord-affiche"><b>FACE B.</b><span>19.06.27</span></div>
+            <div class="disque" aria-hidden="true"></div>
+            <div class="texte-affiche">
+              <p id="genre-affiche">R&amp;B</p>
+              <p id="artiste-affiche">Naya Lune</p>
+              <p id="heure-affiche">18 h 00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="lilas" id="billetterie">
+        <div class="conteneur grille-billet">
+          <div>
+            <h2>Ton billet<br />souvenir.</h2>
+            <p>
+              Garde une trace de ton concert préféré. La borne reprend l’artiste
+              et l’horaire de ton affiche.
+            </p>
+            <button class="bouton encre" id="sortir-billet" type="button">
+              Sortir mon billet
+            </button>
+            <div role="status" id="essai-billet" class="retour-essai"></div>
+            <p id="etat-billet" class="lecture-seule" role="status"></p>
+          </div>
+          <div class="imprimante">
+            <div class="capot">
+              <span>Borne Face B</span
+              ><span class="temoin" aria-hidden="true"></span>
+            </div>
+            <div class="fente" aria-hidden="true"></div>
+            <div id="sortie" class="sortie"></div>
+          </div>
+        </div>
+        <template id="modele-billet">
+          <article class="billet">
+            <div class="talon">
+              <strong>FACE B.</strong><span>Billet souvenir</span>
+            </div>
+            <p class="nom-billet"></p>
+            <p class="heure-billet"></p>
+            <p class="lieu-billet">19 juin 2027 · Studio Canal, Paris</p>
+            <div class="pied-billet">
+              <span class="code-barres" aria-hidden="true"></span>
+              <button type="button" class="retirer">Retirer le billet</button>
+            </div>
+          </article>
+        </template>
+      </section>
+      <!-- Bloc horaires + borne : fin -->
+      <section>
+        <div class="conteneur bloc-editorial">
+          <h2>Après le dernier set</h2>
+          <p>
+            Rendez-vous au stand des artistes pour échanger avec eux et repartir
+            avec leur sélection de morceaux.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="conteneur barre">
+        <p class="marque">FACE B.</p>
+        <a href="#haut">Retour en haut</a>
+      </div>
+    </footer>
+    <script src="js/affiche.js"></script>
+    <script src="js/billet.js"></script>
+    <script src="js/scene.js"></script>
+  </body>
+</html>
