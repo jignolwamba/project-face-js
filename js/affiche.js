@@ -1,10 +1,12 @@
-const testAffiche = document.querySelector("#essai-affiche");
-document.querySelectorAll(".choisir").forEach((bouton) => {
-  bouton.addEventListener("click", () => {
-    const nom = bouton
-      .closest(".concert")
-      .querySelector(".artiste").textContent;
-    testAffiche.textContent =
-      "Clic reçu pour " + nom + ". Ouvre js/affiche.js.";
-  });
-});
+function luna() {
+  document.getElementById("artiste-affiche").innerHTML = "Naya Lune";
+  document.getElementById("genre-affiche0").innerHTML = "Électro";
+}
+function Miro() {
+  document.getElementById("artiste-affiche").innerHTML = "Miro";
+  document.getElementById("genre-affiche0").innerHTML = "Électro";
+}
+function Onde() {
+  document.getElementById("artiste-affiche").innerHTML = "Onde Zéro";
+  document.getElementById("genre-affiche0").innerHTML = "Électro";
+}
